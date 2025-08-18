@@ -7,8 +7,14 @@ EXPOSE 5051
 In IntelliJ debug configuration of your test code, add VM option:
  - -Dmy-container-name-debug-port=5051
 
-When creating a container in main code, add:
+In `dev.streamx.runner.container.StreamxServiceContainer`, add:
 ```java
+  private void initialize(Integer exposedHttpPort) {
+    ...
+    setupDebugPortIfPassedWithSystemProperty();
+    ...
+  }
+
   private void setupDebugPortIfPassedWithSystemProperty(String containerName) {
     String propertyName = containerName + "-debug-port";
     Integer debugPort = Integer.getInteger(propertyName);
@@ -18,6 +24,9 @@ When creating a container in main code, add:
     }
   }
 ```
+
+Run streamx with:
+    java -Dblueprint-web-debug-port=5051 -jar ../streamx/runner/target/quarkus-app/quarkus-run.jar mesh.yaml
 
 In IntelliJ, configure a new debug configuration, to be able to attach to running container
  - create new Remote JVM Debug configuration

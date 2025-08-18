@@ -23,7 +23,7 @@ In `dev.streamx.runner.container.StreamxServiceContainer`, add:
 ```
 
 Run streamx with:
-    java -Dblueprint-web-debug-port=5051 -jar ../streamx/runner/target/quarkus-app/quarkus-run.jar mesh.yaml
+    java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=\*:5051 -Dblueprint-web-debug-port=5051 -jar ../streamx/runner/target/quarkus-app/quarkus-run.jar mesh.yaml
 
 In IntelliJ, configure a new debug configuration, to be able to attach to running container
  - create new Remote JVM Debug configuration

@@ -4,9 +4,6 @@ ENV JAVA_TOOL_OPTIONS='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,add
 EXPOSE 5051
 ```
 
-In IntelliJ debug configuration of your test code, add VM option:
- - -Dmy-container-name-debug-port=5051
-
 In `dev.streamx.runner.container.StreamxServiceContainer`, add:
 ```java
   private void initialize(Integer exposedHttpPort) {

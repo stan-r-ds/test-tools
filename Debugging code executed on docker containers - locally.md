@@ -1,10 +1,10 @@
-In the Dockerfile, add code to enable debugging port:
+In the Dockerfile of your blueprint service, add code to enable debugging port:
 ```Dockerfile
 ENV JAVA_TOOL_OPTIONS='-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=0.0.0.0:5051'
 EXPOSE 5051
 ```
 
-In `dev.streamx.runner.container.StreamxServiceContainer`, add:
+In streamx project, in the class `dev.streamx.runner.container.StreamxServiceContainer`, add:
 ```java
   private void initialize(Integer exposedHttpPort) {
     ...
@@ -22,8 +22,12 @@ In `dev.streamx.runner.container.StreamxServiceContainer`, add:
   }
 ```
 
-Run streamx with:
+Rebuild/reinstall both projects.
+
+Run StreamX Mesh with:
+```bash
     java -Dblueprint-web-debug-port=5051 -jar ../streamx/runner/target/quarkus-app/quarkus-run.jar mesh.yaml
+```
 
 In IntelliJ, configure a new debug configuration, to be able to attach to running container
  - create new Remote JVM Debug configuration

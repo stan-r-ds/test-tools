@@ -1,0 +1,20 @@
+# First ingestion of en-index.json
+11:50:14,200 INFO  Resource /en-index.json, having absolute url https://main--arbory-dev--arbory-digital-inc.aem.live/en-index.json, will be published to StreamX as /en-index.json
+11:50:14,233 TRACE Found 75 external resources for /en-index.json: [/en/media_abcd.png?width=1200&format=pjpg&optimize=medium, 74 more...]
+11:50:15,113 TRACE Success downloading https://main--arbory-dev--arbory-digital-inc.aem.live/en/media_abcd.png?width=1200&format=pjpg&optimize=medium (referenced by parent resource /en-index.json) as /en/media_abcd.png_width_1200_format_pjpg_optimize_medium.png
+11:50:15,114 TRACE Publishing Asset /en/media_abcd.png_width_1200_format_pjpg_optimize_medium.png with sx:type [none]
+                   ...and 74 more such message pairs
+11:50:25,345 TRACE Replacing external links in /en-index.json
+11:50:25,348 TRACE Replacing "/en/media_abcd.png?width=1200&format=pjpg&optimize=medium" to "/en/media_abcd.png_width_1200_format_pjpg_optimize_medium.png"
+                   ...and 74 more such messages
+11:50:25,407 TRACE Publishing resource /en-index.json with all external links adjusted to local paths
+
+# Second ingestion of en-index.json
+11:51:06,927 INFO  Resource /en-index.json, having absolute url https://main--arbory-dev--arbory-digital-inc.aem.live/en-index.json, will be published to StreamX as /en-index.json
+11:51:06,934 TRACE Found 75 external resources for /en-index.json: [/en/media_abcd.png?width=1200&format=pjpg&optimize=medium, 74 more...]
+11:51:07,036 TRACE Not downloading unchanged external resource https://main--arbory-dev--arbory-digital-inc.aem.live/en/media_abcd.png?width=1200&format=pjpg&optimize=medium
+                   ...and 74 more such messages
+11:51:10,384 TRACE Replacing external links in /en-index.json
+11:51:10,385 TRACE Replacing "/en/media_abcd.png?width=1200&format=pjpg&optimize=medium" to "/en/media_abcd.png_width_1200_format_pjpg_optimize_medium.png"
+                   ...and 74 more such messages
+11:51:10,433 TRACE Publishing resource /en-index.json with all external links adjusted to local paths

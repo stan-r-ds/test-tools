@@ -2,6 +2,7 @@ Option 1.
 src/main/resources/application.properties:
 
 quarkus.log.min-level=TRACE
+
 quarkus.log.level=TRACE
 
 ---

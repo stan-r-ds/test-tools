@@ -1,3 +1,12 @@
+Option 1.
+src/main/resources/application.properties:
+
+quarkus.log.min-level=TRACE
+quarkus.log.level=TRACE
+
+---
+
+Option 2 (deprecated)
 ```Dockerfile
 ENV JAVA_OPTS_APPEND="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager -Dquarkus.log.level=TRACE"
 ```

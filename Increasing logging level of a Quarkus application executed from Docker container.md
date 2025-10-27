@@ -5,6 +5,12 @@ quarkus.log.min-level=TRACE
 
 quarkus.log.level=TRACE
 
+or better:
+
+quarkus.log.min-level=TRACE
+
+quarkus.log.category."com.streamx".level=TRACE
+
 ---
 
 Option 2 (deprecated)

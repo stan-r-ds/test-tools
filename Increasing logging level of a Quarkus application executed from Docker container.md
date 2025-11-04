@@ -7,9 +7,9 @@ quarkus.log.level=TRACE
 
 or better:
 
-quarkus.log.min-level=TRACE
+**quarkus.log.min-level=TRACE
 
-quarkus.log.category."com.streamx".level=TRACE
+quarkus.log.category."com.streamx".level=TRACE**
 
 ---
 
